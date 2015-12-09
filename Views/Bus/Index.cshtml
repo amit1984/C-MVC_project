@@ -1,0 +1,43 @@
+﻿@using System.Collections.Generic;
+@model List<Production.Models.BusLists>
+
+@{
+     Layout = "~/Views/MasterPage.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Bus</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+          @Html.ActionLink("create", "Create")
+       <table  class="table table-striped">
+           <tr>
+               <th>ID </th> <th>Bus Name </th> <th>Bus No</th><th>Action</th>
+           </tr>
+          @foreach (var item in Model) {
+       <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusListsID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusNo)
+        </td>
+        
+               <td class="btn">
+                @Html.ActionLink("Delete", "Delete", new { id=item.BusListsID })
+            <button class="btn"><span class="glyphicon glyphicon-pencil"></span>  Edit</button></td>
+           </tr>
+          }
+       </table> 
+    </div>
+</body>
+</html>

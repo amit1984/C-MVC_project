@@ -1,0 +1,8 @@
+C:\Users\amit\documents\visual studio 2012\Projects\Production\bin\Production.pdb
+C:\Users\amit\documents\visual studio 2012\Projects\Production\obj\Debug\Production.dll
+C:\Users\amit\documents\visual studio 2012\Projects\Production\obj\Debug\Production.pdb
+C:\Users\amit\Documents\Visual Studio 2012\Projects\Production\bin\Production.dll
+C:\Users\amit\Documents\Visual Studio 2012\Projects\Production\obj\Debug\Production.Migrations.city.resources
+C:\Users\amit\Documents\Visual Studio 2012\Projects\Production\obj\Debug\Production.csproj.GenerateResource.Cache
+C:\Users\amit\Documents\Visual Studio 2012\Projects\Production\obj\Debug\Production.csprojResolveAssemblyReference.cache
+C:\Users\amit\Documents\Visual Studio 2012\Projects\Production\obj\Debug\Production.Migrations.Account.resources

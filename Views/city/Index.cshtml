@@ -1,0 +1,46 @@
+﻿@using System.Collections.Generic;
+@model IEnumerable<Production.ViewModels.ListCity>
+
+    @{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/MasterPage.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Bus</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div >
+          @Html.ActionLink("create", "Create")
+        @using (Html.BeginForm())
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString")  
+        <input type="submit" value="Search" class="glyphicon glyphicon-search" ></input></p>
+}
+       <table   class="table table-striped">
+           <tr>
+            <th>city ID</th>   <th>City Name </th>  <th>Country Name </th> <th>Action </th>
+           </tr>
+        @foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.cityID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cityName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.countryName)
+        </td>
+    </tr>
+}
+       </table> 
+    </div>
+</body>
+</html>

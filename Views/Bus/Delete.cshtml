@@ -1,0 +1,42 @@
+﻿@model Production.Models.BusLists
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <fieldset>
+        <legend>BusLists</legend>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.BusName)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.BusName)
+        </div>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.BusNo)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.BusNo)
+        </div>
+    </fieldset>
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+        <p>
+            <input type="submit" value="Delete" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    }
+
+</body>
+</html>

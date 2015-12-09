@@ -1,0 +1,26 @@
+﻿@model Production.Models.country
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+@using (Html.BeginForm())
+{
+   
+    <div>
+        <fieldset>
+            <legend>Country</legend>
+            <div class="editor-label">
+                @Html.LabelFor(u => u.countryName)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.countryName)
+               
+            </div>
+           
+           
+            <input type="submit" value="Log In" />
+        </fieldset>
+    </div>
+}

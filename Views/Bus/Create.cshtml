@@ -1,0 +1,32 @@
+﻿@model Production.Models.BusLists
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+@using (Html.BeginForm())
+{
+   
+    <div>
+        <fieldset>
+            <legend>Login</legend>
+            <div class="editor-label">
+                @Html.LabelFor(u => u.BusName)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.BusName)
+               
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(u => u.BusNo)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.BusNo)
+               
+            </div>
+           
+            <input type="submit" value="Log In" />
+        </fieldset>
+    </div>
+}

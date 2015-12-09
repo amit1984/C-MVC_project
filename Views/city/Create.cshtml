@@ -1,0 +1,73 @@
+﻿@model Production.ViewModels.createCity
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/MasterPage.cshtml";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/angular.min.js"></script>  
+    <script src="~/Scripts/cascade.js"></script>
+        
+   
+  
+</head>
+<body>
+
+<h2>Create</h2>
+     <div data-ng-app="myModule">
+         <form name="mainForm" data-ng-submit="sendForm(model)" data-ng-controller="myController" novalidate>   
+        
+            <div class="error">{{message}}</div>
+            <div><input data-ng-model="model.cityName" type="text" /></div>{{model.cityName}}
+            <div>
+               
+                <select data-ng-model="model.countryId"  data-ng-options="c.countryID as c.countryName for c in country" >
+                    <option value="">-- Select Country --</option>
+                </select>
+                </div>{{city}}
+            <div><button type="submit" data-ng-submit="sendForm(model)" data-ng-disabled="mainForm.$invalid">Submit</button></div>
+               
+            </form>
+      </div>     
+        
+   
+
+
+ @*   <fieldset>
+        <legend>city</legend>
+
+
+   
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.cityName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.cityName)
+            @Html.ValidationMessageFor(model => model.cityName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.countryId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.countryId)
+            @Html.ValidationMessageFor(model => model.countryId)
+        </div>
+       
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+</form>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>*@
+</body>
+    </html>
