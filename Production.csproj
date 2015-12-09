@@ -46,6 +46,7 @@
     <Compile Include="Controllers\BusController.cs" />
     <Compile Include="Controllers\cityController.cs" />
     <Compile Include="Controllers\CountryController.cs" />
+    <Compile Include="Controllers\customerController.cs" />
     <Compile Include="enums\Channel.cs" />
     <Compile Include="enums\Gender.cs" />
     <Compile Include="Interface\IcountryRepository.cs" />
@@ -66,7 +67,6 @@
     <Compile Include="Migrations\firstMigration.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\BusLists.cs" />
-    <Compile Include="Models\BusSearch.cs" />
     <Compile Include="Models\city.cs" />
     <Compile Include="Models\country.cs" />
     <Compile Include="Models\customer.cs" />
