@@ -1,0 +1,51 @@
+﻿@model Production.ViewModels.customer.EditCustomer
+
+@{
+    ViewBag.Title = "_templateBudget";
+}
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Budget</legend>
+
+        @Html.HiddenFor(model => model.budgetID)
+
+       
+        <div class="editor-field">
+            @Html.HiddenFor(model => model.custID)
+            @Html.ValidationMessageFor(model => model.custID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.premium)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.premium)
+            @Html.ValidationMessageFor(model => model.premium)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.cheap)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.cheap)
+            @Html.ValidationMessageFor(model => model.cheap)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.luxury)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.luxury)
+            @Html.ValidationMessageFor(model => model.luxury)
+        </div>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

@@ -1,0 +1,56 @@
+﻿@model Production.Models.Budget
+
+<script src="~/Scripts/jquery-1.8.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Budget</legend>
+
+        @Html.HiddenFor(model => model.budgetID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.custID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.custID)
+            @Html.ValidationMessageFor(model => model.custID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.premium)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.premium)
+            @Html.ValidationMessageFor(model => model.premium)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.cheap)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.cheap)
+            @Html.ValidationMessageFor(model => model.cheap)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.luxury)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.luxury)
+            @Html.ValidationMessageFor(model => model.luxury)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

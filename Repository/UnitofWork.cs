@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using Production.DAL;
 using Production.Models;
+using Production.ViewModels.customer;
 
 namespace Production.Repository
 {
@@ -13,6 +14,9 @@ namespace Production.Repository
         private GenericRepository<country> countryRepository;
         private GenericRepository<city> cityRepository;
         private GenericRepository<Account> accountRepository;
+        private GenericRepository<customer> customerRepository;
+        private GenericRepository<Budget> budgetRepository;
+      
 
         public GenericRepository<country> CountryRepository
         {
@@ -38,6 +42,18 @@ namespace Production.Repository
                 return accountRepository;
             }
         }
+        public GenericRepository<customer> CustomerRepository
+        {
+            get
+            {
+
+                if (this.customerRepository == null)
+                {
+                    this.customerRepository = new GenericRepository<customer>(context);
+                }
+                return customerRepository;
+            }
+        }
         public GenericRepository<city> CityRepository
         {
             get
@@ -50,7 +66,18 @@ namespace Production.Repository
                 return cityRepository;
             }
         }
+        public GenericRepository<Budget> BudgetRepository
+        {
+            get
+            {
 
+                if (this.budgetRepository == null)
+                {
+                    this.budgetRepository = new GenericRepository<Budget>(context);
+                }
+                return budgetRepository;
+            }
+        }
     
         public void Save()
         {

@@ -6,3 +6,5 @@ C:\Users\amit\Documents\Visual Studio 2012\Projects\Production\obj\Debug\Product
 C:\Users\amit\Documents\Visual Studio 2012\Projects\Production\obj\Debug\Production.csproj.GenerateResource.Cache
 C:\Users\amit\Documents\Visual Studio 2012\Projects\Production\obj\Debug\Production.csprojResolveAssemblyReference.cache
 C:\Users\amit\Documents\Visual Studio 2012\Projects\Production\obj\Debug\Production.Migrations.Account.resources
+C:\Users\amit\Documents\Visual Studio 2012\Projects\Production\obj\Debug\Production.Migrations.customer.resources
+C:\Users\amit\Documents\Visual Studio 2012\Projects\Production\obj\Debug\Production.Migrations.Budget.resources

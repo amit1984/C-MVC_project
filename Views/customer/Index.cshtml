@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Production.Models.customer>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/MasterPage.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table   class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Culture)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeZone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.Label("Gender")
+        </th>
+        <th>
+            @Html.Label("Channel")
+        </th>
+        <th>@Html.Label("Action")</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Culture)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeZone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+       <td>
+            @Html.DisplayFor(modelItem => item.Gender)
+        </td>
+       <td>
+            @Html.DisplayFor(modelItem => item.Channel)
+        </td>
+       
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.custID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.custID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.custID })
+        </td>
+    </tr>
+}
+
+</table>

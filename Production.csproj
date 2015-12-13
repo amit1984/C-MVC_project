@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\BudgetController.cs" />
     <Compile Include="Controllers\BusController.cs" />
     <Compile Include="Controllers\cityController.cs" />
     <Compile Include="Controllers\CountryController.cs" />
@@ -50,6 +52,7 @@
     <Compile Include="enums\Channel.cs" />
     <Compile Include="enums\Gender.cs" />
     <Compile Include="Interface\IcountryRepository.cs" />
+    <Compile Include="Interface\ICustomerService.cs" />
     <Compile Include="Interface\IRepository.cs" />
     <Compile Include="Migrations\201511192116533_city.cs" />
     <Compile Include="Migrations\201511192116533_city.Designer.cs">
@@ -59,6 +62,14 @@
     <Compile Include="Migrations\201512072235537_Account.Designer.cs">
       <DependentUpon>201512072235537_Account.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512101105045_customer.cs" />
+    <Compile Include="Migrations\201512101105045_customer.Designer.cs">
+      <DependentUpon>201512101105045_customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512111828068_Budget.cs" />
+    <Compile Include="Migrations\201512111828068_Budget.Designer.cs">
+      <DependentUpon>201512111828068_Budget.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DAL\BusContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -66,6 +77,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\firstMigration.cs" />
     <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\Budget.cs" />
     <Compile Include="Models\BusLists.cs" />
     <Compile Include="Models\city.cs" />
     <Compile Include="Models\country.cs" />
@@ -76,8 +88,11 @@
     <Compile Include="Repository\GenericRepository.cs" />
     <Compile Include="Repository\UnitofWork.cs" />
     <Compile Include="services\countryService.cs" />
+    <Compile Include="services\customerService.cs" />
     <Compile Include="Service\cityService.cs" />
     <Compile Include="ViewModels\createCity.cs" />
+    <Compile Include="ViewModels\customer\createCustomer.cs" />
+    <Compile Include="ViewModels\customer\EditCustomer.cs" />
     <Compile Include="ViewModels\ListCity.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -941,11 +956,17 @@
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\Account\Create.cshtml" />
     <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\customer\Create.cshtml" />
+    <Content Include="Views\customer\Index.cshtml" />
+    <Content Include="Views\Budget\Edit.cshtml" />
+    <Content Include="Views\shared\_templateBudget.cshtml" />
+    <Content Include="Views\customer\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\App_LocalResources\" />
     <Folder Include="Content\NewFolder1\" />
+    <Folder Include="controls\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -1065,6 +1086,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512072235537_Account.resx">
       <DependentUpon>201512072235537_Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512101105045_customer.resx">
+      <DependentUpon>201512101105045_customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512111828068_Budget.resx">
+      <DependentUpon>201512111828068_Budget.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

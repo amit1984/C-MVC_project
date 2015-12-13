@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 using Production.enums;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Production.Models
+namespace Production.ViewModels.customer
 {
-    public class customer
+    public class createCustomer
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -25,5 +26,7 @@ namespace Production.Models
         public Guid? CreatedBy { get; set; }
         public DateTime? Changed { get; set; }
         public Guid? ChangedBy { get; set; }
+        public IEnumerable<SelectListItem> Genders { get; set; }
+        public IEnumerable<SelectListItem> Channels { get; set; }
     }
 }

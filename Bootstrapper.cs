@@ -24,7 +24,8 @@ namespace Production
             // it is NOT necessary to register your controllers
             
             // e.g. container.RegisterType<ITestService, TestService>();            
-            container.RegisterType<IcountryRepository, countryService>();         
+            container.RegisterType<IcountryRepository, countryService>();
+            container.RegisterType<ICustomerService, customerService>();   
             return container;
         }
     }

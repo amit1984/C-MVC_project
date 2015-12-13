@@ -6,6 +6,7 @@
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
        <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     </head>
     <body>
         <header>
@@ -21,7 +22,8 @@
                         <ul id="menu">
                             <li>@Html.ActionLink("Bus List", "Index", "Bus")</li>
                             <li>@Html.ActionLink("Country", "Index", "Country")</li>   
-                            <li>@Html.ActionLink("city", "Index", "city")</li>                          
+                            <li>@Html.ActionLink("city", "Index", "city")</li> 
+                            <li>@Html.ActionLink("customer", "Index", "customer")</li>                            
                         </ul>
                     </nav>
                 </div>
