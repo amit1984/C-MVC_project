@@ -13,5 +13,7 @@ namespace Production.Interface
         EditCustomer editcustomer(int id);
         customer getcustomer(int id);
         bool getBudget(int id);
+        bool checkCustomer(string username, string password);
+        int getCustomerID(string username, string password);
     }
 }

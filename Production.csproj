@@ -49,6 +49,7 @@
     <Compile Include="Controllers\cityController.cs" />
     <Compile Include="Controllers\CountryController.cs" />
     <Compile Include="Controllers\customerController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="enums\Channel.cs" />
     <Compile Include="enums\Gender.cs" />
     <Compile Include="Interface\IcountryRepository.cs" />
@@ -70,6 +71,10 @@
     <Compile Include="Migrations\201512111828068_Budget.Designer.cs">
       <DependentUpon>201512111828068_Budget.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512191907432_password.cs" />
+    <Compile Include="Migrations\201512191907432_password.Designer.cs">
+      <DependentUpon>201512191907432_password.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DAL\BusContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -89,11 +94,13 @@
     <Compile Include="Repository\UnitofWork.cs" />
     <Compile Include="services\countryService.cs" />
     <Compile Include="services\customerService.cs" />
+    <Compile Include="services\loginService.cs" />
     <Compile Include="Service\cityService.cs" />
     <Compile Include="ViewModels\createCity.cs" />
     <Compile Include="ViewModels\customer\createCustomer.cs" />
     <Compile Include="ViewModels\customer\EditCustomer.cs" />
     <Compile Include="ViewModels\ListCity.cs" />
+    <Compile Include="ViewModels\login\loginDetails.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -961,6 +968,8 @@
     <Content Include="Views\Budget\Edit.cshtml" />
     <Content Include="Views\shared\_templateBudget.cshtml" />
     <Content Include="Views\customer\Edit.cshtml" />
+    <Content Include="Views\LoginPage.cshtml" />
+    <Content Include="Views\Login\loginDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1096,6 +1105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512111828068_Budget.resx">
       <DependentUpon>201512111828068_Budget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512191907432_password.resx">
+      <DependentUpon>201512191907432_password.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -19,6 +19,7 @@ namespace Production.Models
         public string TimeZone { get; set; }
         public string Phone { get; set; }
         public string email { get; set; }
+        public string password { get; set; }
         public Channel? Channel { get; set; }
         public Gender? Gender { get; set; }
         public DateTime? Created { get; set; }

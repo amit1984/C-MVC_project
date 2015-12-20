@@ -9,6 +9,7 @@ using Production.ViewModels.customer;
 using Production.Models;
 using Production.Repository;
 using Production.Interface;
+using Production.services;
 
 namespace Production.Controllers
 {
@@ -78,6 +79,7 @@ namespace Production.Controllers
                     coun.TimeZone = model.TimeZone;
                     coun.email = model.email;
                     coun.Culture = model.Culture;
+                    coun.password = loginService.GetMD5Hash(model.password);
                     coun.Gender = model.Gender.Value;
                     coun.Channel = model.Channel.Value;
                     unitOfWork.CustomerRepository.Insert(coun);

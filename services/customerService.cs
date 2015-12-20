@@ -6,6 +6,8 @@ using Production.Models;
 using Production.Repository;
 using Production.ViewModels.customer;
 using Production.Interface;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace Production.services
 {
@@ -44,6 +46,30 @@ namespace Production.services
             IEnumerable<customer> _filterCustomer = unitOfWork.CustomerRepository.Get().Where(p => p.custID == id);
             return (_filterCustomer.First());
         }
+        public virtual bool checkCustomer(string username,string password)
+        {
+            IEnumerable<customer> _filterCustomer = unitOfWork.CustomerRepository.Get().Where(p => p.email == username && p.password == password);
+            if (_filterCustomer.Any())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public  int getCustomerID(string username, string password)
+        {
+            IEnumerable<customer> _filterCustomer = unitOfWork.CustomerRepository.Get().Where(p => p.email == username && p.password == password);
+            if (_filterCustomer.Any())
+            {
+                return _filterCustomer.First().custID;
+            }
+            else
+            {
+                return 0;
+            }
+        }
         public bool getBudget(int id)
         {
             IEnumerable<Budget> _filterBudget = unitOfWork.BudgetRepository.Get().Where(p => p.custID == id);
@@ -56,6 +82,7 @@ namespace Production.services
                 return false;
             }
         }
+       
 
     }
 }
