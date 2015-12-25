@@ -6,7 +6,7 @@ using System.Web;
 namespace Production.enums
 {
     public enum Channel
-    {
+    { 
         None = 0,
         Email = 1,
         ContactForm = 2,

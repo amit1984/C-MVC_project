@@ -14,6 +14,10 @@ namespace Production.DAL
         public BusContext() : base("BusContext")
         {
         }
+        public BusContext(string connectionString)
+            : base(connectionString)
+        {
+        }
         
         public DbSet<BusLists> BusLists { get; set; }
         public DbSet<country> country { get; set; }
